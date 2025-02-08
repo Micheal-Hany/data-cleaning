@@ -40,9 +40,7 @@ Here are the parameters included in the `self.config` dictionary:
 
 ## Advanced Data Cleaning Pipeline
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![CI/CD](https://github.com/yourusername/data-cleaning/actions/workflows/main.yml/badge.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![CI/CD](https://github.com/yourusername/data-cleaning/actions/workflows/main.yml/badge.svg)
 
 Automated data preprocessing pipeline for machine learning preparation with comprehensive cleaning capabilities.
 
@@ -59,39 +57,30 @@ Automated data preprocessing pipeline for machine learning preparation with comp
 - [Changelog](#changelog)
 
 ## Features 🛠️
-- **Data Cleaning**
-  - Missing value imputation (median/mode/KNN)
-  - Outlier detection (Z-score/IQR methods)
-  - Duplicate removal
-- **Feature Engineering**
-  - Date/time feature extraction
-  - Categorical encoding (One-Hot/Label)
-  - Text processing (TF-IDF vectorization)
-  - Polynomial feature generation
-- **Optimization**
-  - Skew correction (Yeo-Johnson transform)
-  - Dimensionality reduction (PCA)
-  - Feature scaling (StandardScaler)
-  - Parallel processing support
+- **Data Cleaning**: Missing value imputation (median/mode/KNN), outlier detection (Z-score/IQR), duplicate removal.
+- **Feature Engineering**: Date/time feature extraction, categorical encoding (One-Hot/Label), text processing (TF-IDF vectorization), polynomial feature generation.
+- **Optimization**: Skew correction (Yeo-Johnson transform), dimensionality reduction (PCA), feature scaling (StandardScaler), parallel processing support.
 
 ## Installation 📦
-
 ### Requirements
 - Python 3.8+
 - pip package manager
 
-```bash
-# Clone repository
-git clone https://github.com/yourusername/data-cleaning.git
-cd data-cleaning
-
-# Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/data-cleaning.git
+   cd data-cleaning
+   ```
+2. Create a virtual environment:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Windows: .venv\Scripts\activate
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Quick Start 🚀
 ### Basic Usage
@@ -159,11 +148,11 @@ age_scaled,income_normalized,gender_encoded,pc1,pc2
 
 ## Contributing 🤝
 ### Workflow
-1. Fork the repository
-2. Create feature branch: `git checkout -b feature/new-feature`
-3. Commit changes: `git commit -m 'Add awesome feature'`
-4. Push to branch: `git push origin feature/new-feature`
-5. Open Pull Request
+1. Fork the repository.
+2. Create a feature branch: `git checkout -b feature/new-feature`.
+3. Commit changes: `git commit -m 'Add awesome feature'`.
+4. Push to branch: `git push origin feature/new-feature`.
+5. Open a Pull Request.
 
 ### Development Setup
 ```bash
@@ -191,23 +180,27 @@ This project is licensed under the MIT License.
 
 ## Changelog 📌
 v1.2.0 (2023-08-15)
-- Added KNN imputation
-- Improved parallel processing
-- Enhanced date parsing
+- Added KNN imputation.
+- Improved parallel processing.
+- Enhanced date parsing.
 
 v1.1.0 (2023-08-01)
-- Added TF-IDF vectorization
-- Implemented PCA support
-- Improved documentation
+- Added TF-IDF vectorization.
+- Implemented PCA support.
+- Improved documentation.
 
 v1.0.0 (2023-07-15)
-- Initial release
-- Core cleaning features
-- Basic configuration system
+- Initial release.
+- Core cleaning features.
+- Basic configuration system.
 
-## Acknowledgments
-- [Your Name] - for developing the initial codebase.
-- [Contributors] - for their valuable feedback and contributions.
+**To Use This File:**
+1. Replace placeholders (`yourusername`, `yourcompany.com`) with your actual information.
+2. Save as `README.md` in your project root.
+3. Create accompanying files:
+   - `LICENSE.md`
+   - `requirements.txt`
+   - `requirements-dev.txt`
+4. Add actual implementation code in `data_cleaner.py`.
 
-## License
-This project is licensed under the MIT License.
+This README provides complete documentation while maintaining readability and a professional presentation.
