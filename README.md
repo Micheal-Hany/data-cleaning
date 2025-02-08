@@ -4,18 +4,6 @@
 
 Automated data preprocessing pipeline for machine learning preparation with comprehensive cleaning capabilities.
 
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Configuration Options](#configuration-options)
-- [Usage Examples](#usage-examples)
-- [Output Format](#output-format)
-- [Contributing](#contributing)
-- [License](#license)
-- [Support](#support)
-- [Changelog](#changelog)
-
 ## Features 🛠️
 - **Data Cleaning**: Missing value imputation (median/mode/KNN), outlier detection (Z-score/IQR), duplicate removal.
 - **Feature Engineering**: Date/time feature extraction, categorical encoding (One-Hot/Label), text processing (TF-IDF vectorization), polynomial feature generation.
