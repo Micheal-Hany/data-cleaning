@@ -1,43 +1,3 @@
-# Project Title
-
-## Introduction
-This project focuses on data cleaning techniques using Python. It provides various methods and tools to preprocess and clean datasets, making them ready for analysis.
-
-## Installation
-To install the required packages, run the following command:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-1. Import the necessary modules:
-   ```python
-   import pandas as pd
-   from data_cleaning import clean_data
-   ```
-2. Load your dataset:
-   ```python
-   df = pd.read_csv('your_dataset.csv')
-   ```
-3. Clean your data:
-   ```python
-   cleaned_df = clean_data(df)
-   ```
-
-## Configuration
-
-The `self.config` dictionary in the data cleaning script is a crucial component that allows users to customize the data cleaning process according to their specific needs. It is a flexible and powerful tool that enables the modification of various parameters to suit different datasets and requirements. By adjusting the values in the `self.config` dictionary, users can control how the data cleaning script handles missing values, outliers, data scaling, categorical features, text processing, dimensionality reduction, and parallel processing.
-
-Here are the parameters included in the `self.config` dictionary:
-
-- **missing_threshold**: Set to `0.7`, this parameter defines the threshold for missing values. If the proportion of missing values in a feature exceeds this threshold, that feature will be dropped.
-- **outlier_method**: Set to `'zscore'`, this specifies the method used for detecting outliers in the dataset. The Z-score method identifies outliers based on standard deviations from the mean.
-- **scale_data**: A boolean value set to `True`, indicating whether to scale the data before applying transformations. Scaling is essential for algorithms sensitive to the magnitude of features.
-- **max_categories**: Set to `20`, this parameter limits the maximum number of unique categories allowed in categorical features. Features with more unique categories will be handled differently to avoid high cardinality issues.
-- **text_features**: A boolean value set to `False`, indicating whether to treat features as text. If set to `True`, specific text processing methods will be applied.
-- **dimension_reduction**: A boolean value set to `False`, indicating whether to apply dimensionality reduction techniques to the dataset. If set to `True`, methods like PCA may be used to reduce the number of features.
-- **n_jobs**: Set to `-1`, this parameter specifies the number of jobs to run in parallel for processing. A value of `-1` means using all available processors.
-
 ## Advanced Data Cleaning Pipeline
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![CI/CD](https://github.com/yourusername/data-cleaning/actions/workflows/main.yml/badge.svg)
@@ -106,6 +66,52 @@ cleaned_data.to_csv("cleaned_output.csv", index=False)
 | text_features        | bool    | False   | Enable TF-IDF text processing                     |
 | dimension_reduction  | bool    | False   | Enable PCA dimensionality reduction                |
 | n_jobs              | int     | -1      | CPU cores to use (-1 = all cores)                |
+
+## Configuration
+
+The `self.config` dictionary in the data cleaning script is a crucial component that allows users to customize the data cleaning process according to their specific needs. It is a flexible and powerful tool that enables the modification of various parameters to suit different datasets and requirements. By adjusting the values in the `self.config` dictionary, users can control how the data cleaning script handles missing values, outliers, data scaling, categorical features, text processing, dimensionality reduction, and parallel processing.
+
+Here are the parameters included in the `self.config` dictionary:
+
+- **missing_threshold**: Set to `0.7`, this parameter defines the threshold for missing values. If the proportion of missing values in a feature exceeds this threshold, that feature will be dropped.
+- **outlier_method**: Set to `'zscore'`, this specifies the method used for detecting outliers in the dataset. The Z-score method identifies outliers based on standard deviations from the mean.
+- **scale_data**: A boolean value set to `True`, indicating whether to scale the data before applying transformations. Scaling is essential for algorithms sensitive to the magnitude of features.
+- **max_categories**: Set to `20`, this parameter limits the maximum number of unique categories allowed in categorical features. Features with more unique categories will be handled differently to avoid high cardinality issues.
+- **text_features**: A boolean value set to `False`, indicating whether to treat features as text. If set to `True`, specific text processing methods will be applied.
+- **dimension_reduction**: A boolean value set to `False`, indicating whether to apply dimensionality reduction techniques to the dataset. If set to `True`, methods like PCA may be used to reduce the number of features.
+- **n_jobs**: Set to `-1`, this parameter specifies the number of jobs to run in parallel for processing. A value of `-1` means using all available processors.
+
+### Detailed Configuration Explanation
+
+The `self.config` dictionary is a key component of the data cleaning script, allowing users to customize the cleaning process to suit their specific needs. The dictionary contains several parameters that control various aspects of the cleaning process.
+
+#### Missing Value Handling
+
+The `missing_threshold` parameter determines the threshold for missing values in a feature. If the proportion of missing values in a feature exceeds this threshold, the feature will be dropped. This parameter is set to `0.7` by default, meaning that features with more than 70% missing values will be dropped.
+
+#### Outlier Detection
+
+The `outlier_method` parameter specifies the method used for detecting outliers in the dataset. The Z-score method is used by default, which identifies outliers based on standard deviations from the mean.
+
+#### Data Scaling
+
+The `scale_data` parameter is a boolean value that indicates whether to scale the data before applying transformations. Scaling is essential for algorithms sensitive to the magnitude of features. This parameter is set to `True` by default.
+
+#### Categorical Feature Handling
+
+The `max_categories` parameter limits the maximum number of unique categories allowed in categorical features. Features with more unique categories will be handled differently to avoid high cardinality issues. This parameter is set to `20` by default.
+
+#### Text Feature Handling
+
+The `text_features` parameter is a boolean value that indicates whether to treat features as text. If set to `True`, specific text processing methods will be applied. This parameter is set to `False` by default.
+
+#### Dimensionality Reduction
+
+The `dimension_reduction` parameter is a boolean value that indicates whether to apply dimensionality reduction techniques to the dataset. If set to `True`, methods like PCA may be used to reduce the number of features. This parameter is set to `False` by default.
+
+#### Parallel Processing
+
+The `n_jobs` parameter specifies the number of jobs to run in parallel for processing. A value of `-1` means using all available processors. This parameter is set to `-1` by default.
 
 ## Usage Examples 📝
 ### Custom Configuration
